@@ -1,0 +1,187 @@
+/* Definindo a fonte principal */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f1f1f1; /* Fundo branco claro */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100vh;
+    flex-direction: column;
+    overflow-y: auto; /* Adicionando rolagem */
+    color: #333; /* Texto preto escuro */
+}
+
+/* Container principal com fundo branco */
+.container {
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 80%;
+    max-width: 900px;
+    margin: 20px auto; /* Centraliza a caixa */
+    overflow: visible; /* Garante que o conteúdo não seja cortado */
+    box-sizing: border-box;
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    color: #2C6B2F; /* Verde escuro */
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* Subtítulo */
+h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333; /* Preto */
+}
+
+/* Estilo do dia */
+.dia {
+    margin-top: 20px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.dia h3 {
+    font-size: 28px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Grid de horários */
+.horarios {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    justify-items: center;
+}
+
+.horario-btn {
+    background-color: #2C6B2F; /* Verde escuro */
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.2s;
+    box-sizing: border-box;
+}
+
+.horario-btn:hover {
+    background-color: #1F5225; /* Verde ainda mais escuro no hover */
+    transform: translateY(-2px);
+}
+
+.horario-btn.ocupado {
+    background-color: #d3d3d3;
+    cursor: not-allowed;
+}
+
+.horario-btn.selecionado {
+    background-color: #FF6347; /* Vermelho tomate */
+    transform: translateY(-2px);
+}
+
+/* Estilo para o formulário */
+#formulario-agendamento {
+    margin-top: 40px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #2C6B2F; /* Verde escuro */
+    color: white;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #1F5225; /* Verde mais escuro no hover */
+}
+
+.escondido {
+    display: none;
+}
+
+/* Mensagem de sucesso */
+#sucesso {
+    text-align: center;
+    margin-top: 20px;
+    color: #2C6B2F; /* Verde escuro */
+}
+
+/* Ajustes de layout e responsividade */
+.dia-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Responsividade para dispositivos menores */
+.dia {
+    flex: 1 1 30%; /* Faz com que as caixas de dia se ajustem ao tamanho da tela */
+    margin-bottom: 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .dia {
+        flex: 1 1 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .dia {
+        flex: 1 1 100%;
+    }
+}
+
+/* Melhorando a rolagem e layout geral */
+html, body {
+    height: 100%; /* Garantir que o body ocupe toda a altura da tela */
+}
+
+.container {
+    overflow-y: auto; /* Permite rolagem */
+    max-height: 90vh; /* Limita a altura da caixa */
+}
+
+/* Alinhamento e margens para a barra superior */
+body > h1 {
+    padding-top: 20px;
+}
+
+/* Ajuste no rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+}
