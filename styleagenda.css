@@ -185,3 +185,23 @@ footer {
     width: 100%;
     margin-top: auto;
 }
+
+/* Botão Voltar para o site principal */
+.botao-voltar {
+    display: inline-block;
+    background-color: #2C6B2F; /* Verde escuro */
+    color: white;
+    padding: 8px 15px; /* Ajuste o padding para reduzir o tamanho */
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px; /* Fonte um pouco menor */
+    text-align: center;
+    margin: 10px auto; /* Menor margem para um botão mais compacto */
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.botao-voltar:hover {
+    background-color: #1F5225; /* Verde mais escuro no hover */
+    transform: translateY(-2px);
+}
+
